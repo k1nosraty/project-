@@ -1,0 +1,28 @@
+#include"newgame.h"
+#include<QGraphicsScene>
+#include<QGraphicsView>
+#include<bomber.h>
+#include<ball.h>
+#include<statue.h>
+#include<QDebug>
+#include"user.h"
+newgame::newgame(user *_user)
+{
+    //QGraphicsScene *_scene=new QGraphicsScene();
+    //bomber *_bomber=_user->_bomber;
+    //_scene=_user->scene;
+    statue *_statue=new statue(_user->show_dificulty());
+
+      _user->scene->addItem(_user->_bomber);
+      _user->_bomber->setPos(200,1400);
+
+   (_user->scene)->addItem(_statue);
+    _statue->setPos(2600,1800);
+    qDebug("deee");
+   /*QGraphicsView *view= new QGraphicsView(_scene);
+    view->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+    view->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+    view->setFixedSize(3000,2000);
+    view->show();*/
+
+}

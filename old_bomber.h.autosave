@@ -1,0 +1,9 @@
+#ifndef OLD_BOMBER_H
+#define OLD_BOMBER_H
+#include"bomber.h"
+class new_bomber:public bomber{
+    
+    
+};
+
+#endif // OLD_BOMBER_H
